@@ -10,7 +10,11 @@ import androidx.databinding.ViewDataBinding;
 
 import com.loader.pro.di.BaseViewModel;
 
-
+/**
+ * Base Activity which can be used as the parent of every activity used in project.
+ * @param <T>
+ * @param <V>
+ */
 public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseViewModel> extends AppCompatActivity {
 
     protected T mViewDataBinding;

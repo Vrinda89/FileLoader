@@ -13,6 +13,9 @@ import dagger.BindsInstance;
 import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 
+/**
+ * all modules to be injected is specified here
+ */
 @Singleton
 @Component(modules = {AndroidInjectionModule.class, AppModule.class, ActivityModule.class})
 public interface AppComponent {

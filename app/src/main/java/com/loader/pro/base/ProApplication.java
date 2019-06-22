@@ -15,6 +15,9 @@ import dagger.android.AndroidInjection;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
 
+/***
+ * Application class where the dependency injection is done.
+ */
 public class ProApplication extends Application implements HasActivityInjector {
 
 

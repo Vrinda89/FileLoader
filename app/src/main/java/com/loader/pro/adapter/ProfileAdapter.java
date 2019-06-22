@@ -14,6 +14,11 @@ import com.loader.pro.model.ProfileResponse;
 
 import java.util.List;
 
+/**
+ * Author : Vrinda
+ * Date : 23/6/19
+ * Email : vrindavenugopal999@gmail.com
+ */
 public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ViewHolder> {
 
     private List<ProfileResponse.Profile> list;

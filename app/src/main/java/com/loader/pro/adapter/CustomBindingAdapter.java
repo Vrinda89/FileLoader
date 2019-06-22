@@ -17,6 +17,11 @@ import com.loader.pro.R;
  */
 public class CustomBindingAdapter {
 
+    /**
+     * Loads image in ImageView with the created library using data binding
+     * @param imageView
+     * @param url
+     */
     @BindingAdapter("image")
     public static void setImageUrl(AppCompatImageView imageView, String url) {
         if (TextUtils.isEmpty(url)) {
@@ -26,6 +31,11 @@ public class CustomBindingAdapter {
         }
     }
 
+    /**
+     * set text with count of likes appended with "Likes"
+     * @param textView
+     * @param likes
+     */
     @BindingAdapter("likes")
     public static void setLikes(AppCompatTextView textView, int likes) {
         Context context = textView.getContext();

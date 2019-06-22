@@ -2,6 +2,7 @@ package com.loader.pro.view;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -15,6 +16,7 @@ import com.loader.pro.adapter.ProfileAdapter;
 import com.loader.pro.base.BaseActivity;
 import com.loader.pro.databinding.ActivityMainBinding;
 import com.loader.pro.model.ProfileResponse;
+import com.loader.pro.utils.NetWorkUtils;
 import com.loader.pro.viewmodel.MainViewModel;
 
 import java.util.Arrays;
@@ -53,6 +55,9 @@ public class MainActivity extends BaseActivity<ActivityMainBinding,MainViewModel
     }
 
     private void fetchJsonData(String url) {
+        if(!NetWorkUtils.isNetworkConnected(this)){
+            Toast.makeText(this,"Please check your network connection and try again",Toast.LENGTH_SHORT).show();
+        }
         MFileLoader.getInstance().loadJson(url, new JsonResponseListener() {
             @Override
             public void onResponse(MLoaderResponse mLoaderResponse) {
