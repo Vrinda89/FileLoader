@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">pro</string>
+    <string name="action_settings">Settings</string>
+    <string name="str_likes">Likes</string>
+</resources>
