@@ -11,16 +11,29 @@
 ## About 
     
     - This project is developed in MVVM Architecture. 
-    - Used the loader3 library for download image, Json file
-    - Dagger is used for dependency injection so that depended object is ready during the runtime of the application.
+    - Used the loader3 library for download image, Json file.
+    - LruCache is used to cache the downloaded images in memory.
+    - The input url is kept as key for caching and the response 
+      in byte array and type of the file(ex:- type = 0 for image,
+      type = 1 for json) as an object for corresponding value in cache.
+    - library always fetch data from cache if you are trying download 
+      the same file which is already fetched and stored in LruCache.
+      Thus it avoids unnecessary download process and helps easy loading of files.    
+    - Dagger is used in demo for dependency injection so that depended object is 
+      ready during the runtime of the application.
     - Network calls are done using AsyncTask.
     - Datas are populated in UI using databinding method.
-    - Clear text traffic is enabled for the api url since it is http url. And from Android Oreo OS doesn't allow the url request without https.
+    - Clear text traffic is enabled for the api url since it is http url.
+      And from Android Oreo OS doesn't allow the url request without https.
     
 ### Library
 
-     Image loading library that will be used to asynchronously download the images.The library will also be useful for all other parts of the app where asynchronous remote image loading is required. 
-     Library is created for multi type file download .Currentl it can be used for download image and Json data from a url and the library returns a byte[] of respone in callback.
+     Image loading library that will be used to asynchronously download the images.
+     The library will also be useful for all other parts of the app where asynchronous
+     remote image loading is required. Library is created for multi type file download .
+     Currently it can be used for download image and Json data from a url and the library
+     returns a byte[] of respone in callback. 
+    
      
 #### Image Loader
        
