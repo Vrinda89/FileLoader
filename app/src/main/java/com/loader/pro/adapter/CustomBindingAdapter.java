@@ -9,6 +9,7 @@ import androidx.databinding.BindingAdapter;
 
 import com.loader.loader3.MFileLoader;
 import com.loader.pro.R;
+import com.loader.pro.utils.Utils;
 
 /**
  * Author : Vrinda
@@ -40,6 +41,16 @@ public class CustomBindingAdapter {
     public static void setLikes(AppCompatTextView textView, int likes) {
         Context context = textView.getContext();
         textView.setText(new StringBuilder().append(likes).append(" ").append(context.getResources().getString(R.string.str_likes)).toString());
+    }
+
+  /**
+     * format input date string into dd-mm-yyyy and set to the text view
+     * @param textView
+     * @param date
+     */
+    @BindingAdapter("f_date")
+    public static void setDate(AppCompatTextView textView, String  date) {
+        textView.setText(Utils.formateDate(date));
     }
 
 }

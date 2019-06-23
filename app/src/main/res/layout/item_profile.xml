@@ -34,7 +34,7 @@
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dim_pic_height"
-                    android:layout_weight=".8"
+                    android:layout_weight="1"
                     android:scaleType="fitXY"
                     app:image="@{profile.user.profile_image.large}" />
 
@@ -60,12 +60,12 @@
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_3dp"
                             android:layout_weight="1"
                             android:gravity="left"
-                            android:layout_marginLeft="@dimen/dim_3dp"
                             android:text="@{profile.user.name}"
-                            android:textSize="@dimen/dim_12sp"
                             android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/dim_12sp"
                             app:fontFamily="sans-serif-medium" />
 
                     </LinearLayout>
@@ -86,12 +86,12 @@
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_3dp"
                             android:layout_weight="1"
                             android:gravity="left"
-                            android:textSize="@dimen/dim_12sp"
-                            android:layout_marginLeft="@dimen/dim_3dp"
                             android:text="@{profile.user.username}"
                             android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/dim_12sp"
                             app:fontFamily="sans-serif-medium" />
 
                     </LinearLayout>
@@ -104,12 +104,38 @@
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
-                            android:drawablePadding="@dimen/dim_3dp"
                             android:layout_height="wrap_content"
-                            app:likes="@{profile.likes}"
-                            android:padding="@dimen/dim_3dp"
-                            android:drawableLeft="@drawable/ic_thumb_up"
+                            android:text="Created On:"
+                            android:textSize="@dimen/dim_12sp"
+                            app:fontFamily="sans-serif" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dim_3dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/dim_12sp"
+                            app:f_date="@{profile.created_at}"
                             app:fontFamily="sans-serif-medium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_3dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_thumb_up"
+                            android:drawablePadding="@dimen/dim_3dp"
+                            android:padding="@dimen/dim_3dp"
+                            app:fontFamily="sans-serif-medium"
+                            app:likes="@{profile.likes}" />
 
 
                     </LinearLayout>

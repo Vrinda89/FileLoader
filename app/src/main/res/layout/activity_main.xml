@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.loader.pro.viewmodel.MainViewModel" />
+            type="com.loader.pro.viewmodel.ProfileViewModel" />
     </data>
 
     <LinearLayout
@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        tools:context=".view.MainActivity">
+        tools:context=".view.ProfileActivity">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolBar"

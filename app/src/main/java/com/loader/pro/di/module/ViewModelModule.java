@@ -4,7 +4,7 @@ package com.loader.pro.di.module;
 import androidx.lifecycle.ViewModel;
 
 import com.loader.pro.base.key.ViewModelKey;
-import com.loader.pro.viewmodel.MainViewModel;
+import com.loader.pro.viewmodel.ProfileViewModel;
 
 import dagger.Binds;
 import dagger.Module;
@@ -17,8 +17,8 @@ public abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(MainViewModel.class)
-    abstract ViewModel bindMainViewModel(MainViewModel viewModel);
+    @ViewModelKey(ProfileViewModel.class)
+    abstract ViewModel bindMainViewModel(ProfileViewModel viewModel);
 
 
 

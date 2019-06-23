@@ -1,7 +1,7 @@
 package com.loader.pro.di.module;
 
 
-import com.loader.pro.view.MainActivity;
+import com.loader.pro.view.ProfileActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -13,5 +13,5 @@ import dagger.android.ContributesAndroidInjector;
 public abstract class ActivityModule {
 
     @ContributesAndroidInjector
-    abstract MainActivity contributeMainActivity();
+    abstract ProfileActivity contributeMainActivity();
 }
